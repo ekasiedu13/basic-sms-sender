@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPack Starter</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="h1" style="text-align:center">SMS Portal</div>
+
+        <!-- <div class="card text-black">
+            <input type="text" name="sender" id="sender">
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <button type="submit">Send SMS</button>
+
+            onsubmit="worker();"
+
+        </div> -->
+
+        <div class="card  w-75" style="margin-left:auto; margin-right:auto">
+            <h5 class="card-header"><p style="text-align:right" name="time" id="time"></p></h5>
+            <div class="card-body">
+            <h5 class="card-title">Please Send Your Bulk SMS Here</h5>
+            
+            <form id="smsForm">
+            <!-- <form method="POST" autocomplete="off"  onsubmit= "worker()"> -->
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Sender's First Name" id="senderFn" maxlength="12">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Sender Email" id="senderEmail">
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Recipient Full Name" id="recipientFn">
+                    </div>
+                    <div class="col">
+                        <input type="tel" class="form-control" placeholder="Recipient Contact" id="recContact" maxlength="12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="messageContent">Message</label>
+                    <textarea id="msgContent" cols="200" rows="8" placeholder="Enter Your Message Here" maxlength="200"></textarea>
+                </div>
+
+                <br>
+
+                <div style="text-align:center">
+                  <!-- <input class="btn btn-outline-success" type="submit" onsubmit= "alert('Hello\nHow are you?');" value="Send Message"> -->
+                  <button type="submit" class="btn btn-outline-success">Send Message</button>
+                </div>
+            </form>
+            <!-- onsubmit="worker();" -->
+            </div>
+        </div>
+
+    </div>
+    
+    
+    <script>
+        var display = setInterval(function(){Time()},0);
+        
+        function Time()
+        {
+            var date = new Date();
+            var time = date.toLocaleTimeString();
+            document.getElementById("time").innerHTML = time;
+        }
+    </script>
+
+    <!-- // -->
+
+    <script src="./build/app.bundle.js"></script>
+
+
+</body>
+</html>
